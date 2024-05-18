@@ -7,7 +7,6 @@ Gestión de datos de **empresas** en **PHP**, bajo el marco de trabajo **Laravel
 ## Responsables
 
 - **Desarrollador**: Jose Luis Trespalacios Bedoya
-- **Veedor inicial de proyecto**: Javier Gonzalez
 
 Este proyecto es la solución al desafío técnico de **Aicoll**, desarrollado en **PHP** utilizando el framework **Laravel**. El objetivo principal es gestionar los datos de una tabla llamada **empresas** a través de un conjunto de un servicio web. Estas funcionalidades permiten realizar operaciones completas de **CRUD** (Crear, Leer, Actualizar, Eliminar), así como consultas específicas y filtradas. Según los criterios de aceptación de la prueba técnica.
 
