@@ -55,7 +55,7 @@ Para garantizar una estructura clara y mantenible, esta implementación sigue un
   - **Configuraciones**: Archivos de configuración para la base de datos, servicios externos, etc.
   - **Proveedores de servicios**: Registran las implementaciones de repositorios y otros servicios en el contenedor de dependencias de Laravel.
 
-### Implementación de la Arquitectura
+### Implementación de la arquitectura
 
 #### Patrón MVC (Modelo-Vista-Controlador)
 
@@ -69,11 +69,11 @@ Este patrón proporciona una abstracción sobre la capa de acceso a datos. Los r
 
 Los servicios encapsulan la lógica de negocio y las reglas específicas, permitiendo una mejor organización y reutilización del código.
 
-#### Inyección de Dependencias
+#### Inyección de dependencias
 
 Laravel facilita la inyección de dependencias, mejorando la modularidad y la facilidad de prueba del código. Las dependencias se inyectan en los controladores y servicios a través de sus constructores.
 
-#### Pruebas Unitarias
+#### Pruebas unitarias
 
 Utilizando PHPUnit, se realizan pruebas unitarias para asegurar el correcto funcionamiento de cada componente de manera aislada.
 
@@ -112,7 +112,7 @@ Sigue los siguientes pasos para configurar y utilizar el proyecto:
 
 2. Configura las variables de entorno en el archivo `.env` según tu entorno de desarrollo, especialmente las relacionadas con la base de datos.
 
-### 3. Migraciones y Semillas
+### 3. Migraciones y datos semilla
 
 1. Ejecuta las migraciones para crear la estructura de la base de datos:
     ```bash
@@ -133,7 +133,7 @@ Sigue los siguientes pasos para configurar y utilizar el proyecto:
 
 2. Accede a la aplicación en tu navegador web utilizando la URL proporcionada por el servidor local.
 
-### 5. Uso de los Web Services
+### 5. Uso de los Web Services o servicios web
 
 1. Utiliza un cliente de API como Postman para interactuar con los Web Services proporcionados por la aplicación.
 
@@ -151,7 +151,3 @@ Sigue los siguientes pasos para configurar y utilizar el proyecto:
     ```bash
     php artisan test
     ```
-
-2. Revisa los resultados de las pruebas y asegúrate de que todas pasen satisfactoriamente.
-
-¡Listo! Ahora puedes comenzar a utilizar y desarrollar sobre la aplicación.
