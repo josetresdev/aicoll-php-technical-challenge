@@ -2,21 +2,21 @@
 
 ## Servicio de manejo de datos empresas - Reto técnico Aicoll
 
-Gestión de datos de empresas en PHP, bajo el marco de trabajo Laravel, incluyendo agregar, actualizar, consultar y eliminar empresas a través de un servicio web.
+Gestión de datos de **empresas** en **PHP**, bajo el marco de trabajo **Laravel**, incluyendo agregar, actualizar, consultar y eliminar empresas a través de un servicio web.
 
 ## Responsables
 
 - **Desarrollador**: Jose Luis Trespalacios Bedoya
 - **Veedor inicial de proyecto**: Javier Gonzalez
 
-Este proyecto es la solución al desafío técnico de Aicoll, desarrollado en PHP utilizando el framework Laravel. El objetivo principal es gestionar los datos de una tabla llamada empresas a través de un conjunto de Web Services. Estas funcionalidades permiten realizar operaciones completas de CRUD (Crear, Leer, Actualizar, Eliminar), así como consultas específicas y filtradas. Según los criterios de aceptación de la prueba técnica.
+Este proyecto es la solución al desafío técnico de **Aicoll**, desarrollado en **PHP** utilizando el framework **Laravel**. El objetivo principal es gestionar los datos de una tabla llamada **empresas** a través de un conjunto de un servicio web. Estas funcionalidades permiten realizar operaciones completas de **CRUD** (Crear, Leer, Actualizar, Eliminar), así como consultas específicas y filtradas. Según los criterios de aceptación de la prueba técnica.
 
 ## Tecnologías y herramientas de proyecto
 
-- **PHP**: Lenguaje de programación principal.
+- **PHP**: Lenguaje de programación principal, este orientado a **Backend**.
 - **Laravel**: Framework utilizado para el desarrollo del proyecto.
 - **PostgreSQL**: Bases de datos utilizadas para el almacenamiento de los datos procesados.
-- **Postman**: Herramienta para probar y documentar los Web Services.
+- **Postman**: Herramienta para probar y documentar los servicios web.
 - **PHP Unit**: Framework para realizar pruebas unitarias.
 - **Docker**: Plataforma de contenedores utilizada para crear, distribuir y ejecutar aplicaciones de manera consistente en cualquier entorno.
 - **GitHub Actions**: En definición de uso.
@@ -25,7 +25,7 @@ Este proyecto es la solución al desafío técnico de Aicoll, desarrollado en PH
 
 ## Estructura, arquitectura, patrones y capas de aplicación
 
-Para asegurar una estructura clara y mantenible, este proyecto sigue una arquitectura en capas. A continuación, se describe cada una de las capas y su responsabilidad dentro de la aplicación.
+Para garantizar una estructura clara y mantenible, esta implementación sigue una arquitectura en capas. A continuación, se describe cada una de las capas y su responsabilidad dentro de la aplicación.
 
 ### 1. Capa de presentación
 
@@ -40,14 +40,14 @@ Para asegurar una estructura clara y mantenible, este proyecto sigue una arquite
 - **Componentes**:
   - **Servicios**: Contienen la lógica de negocio y reglas específicas que se aplican a los datos. Encapsulan operaciones complejas y las hacen reutilizables.
 
-### 3. Capa de Dominio
+### 3. Capa de dominio
 
 - **Objetivo**: Gestionar las reglas de negocio y la lógica central de la aplicación.
 - **Componentes**:
   - **Modelos (Eloquent Models)**: Representan las entidades del dominio y gestionan la lógica relacionada con los datos.
   - **Repositorios**: Proporcionan una abstracción sobre la capa de acceso a datos, permitiendo la interacción con la base de datos de manera desacoplada.
 
-### 4. Capa de Infraestructura
+### 4. Capa de infraestructura
 
 - **Responsabilidad**: Manejar la persistencia de datos y otras preocupaciones de infraestructura.
 - **Componentes**:
