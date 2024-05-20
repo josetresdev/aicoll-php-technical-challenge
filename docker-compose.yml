@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql_container
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: aicoll-challenge-db
+      MYSQL_USER: root
+      MYSQL_PASSWORD: D3s4rr0ll02024**
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+      - ./mysql_init:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
