@@ -3,20 +3,26 @@
 namespace Tests\Unit;
 
 use Tests\TestCase;
-use App\Domain\Services\CompanyService;
 use App\Domain\Repositories\CompanyRepository;
-use Mockery;
+use App\Domain\Services\CompanyService;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class CompanyServiceTest extends TestCase
 {
-    public function test_get_all_companies()
+    use RefreshDatabase;
+
+    /** @test */
+    public function it_can_find_company_by_nit()
     {
-        $companyRepository = Mockery::mock(CompanyRepository::class);
-        $companyRepository->shouldReceive('getAll')->andReturn([]);
+        $company = Company::factory()->create([
+            'nit' => '123456789'
+        ]);
 
-        $companyService = new CompanyService($companyRepository);
-        $companies = $companyService->getAllCompanies();
+        $repository = new CompanyRepository();
+        $service = new CompanyService($repository);
 
-        $this->assertEmpty($companies);
+        $foundCompany = $service->findByNit('123456789');
+
+        $this->assertEquals($company->id, $foundCompany->id);
     }
 }

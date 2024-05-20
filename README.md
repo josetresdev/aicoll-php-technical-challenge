@@ -87,55 +87,14 @@ Esta arquitectura en capas asegura una clara separación de responsabilidades, f
 
 Sigue los siguientes pasos para configurar y utilizar el proyecto:
 
-### 1. Instalación
+## Instalación y Configuración
 
-1. Clona el repositorio:
-    ```bash
-    git clone https://github.com/josetresdev/aicoll-php-technical-challenge.git
-    ```
-
-2. Navega al directorio del proyecto:
-    ```bash
-    cd aicoll-php-technical-challenge
-    ```
-
-3. Instala las dependencias usando Composer:
-    ```bash
-    composer install
-    ```
-
-### 2. Configuración
-
-### Conexión a la Base de Datos
-
-La aplicación se conecta a una base de datos MySQL. A continuación, se detalla la configuración de conexión:
-
-```env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=database
-DB_USERNAME=user
-DB_PASSWORD=password
-
-1. Copia el archivo de configuración de ejemplo:
-    ```bash
-    cp .env.example .env
-    ```
-
-2. Configura las variables de entorno en el archivo `.env` según tu entorno de desarrollo, especialmente las relacionadas con la base de datos.
-
-### 3. Migraciones y datos semilla
-
-1. Ejecuta las migraciones para crear la estructura de la base de datos:
-    ```bash
-    php artisan migrate
-    ```
-
-2. Opcionalmente, puedes ejecutar las semillas para poblar la base de datos con datos de ejemplo:
-    ```bash
-    php artisan db:seed
-    ```
+1. Clona el repositorio en tu máquina local.
+2. Instala las dependencias del proyecto ejecutando `composer install`.
+3. Crea un archivo `.env` basado en el archivo `.env.example` y configura la conexión a la base de datos.
+4. Ejecuta las migraciones para crear las tablas en la base de datos con el comando `php artisan migrate`.
+5. Llena la base de datos con datos semilla ejecutando `php artisan db:seed`.
+6. Levanta el servidor local con el comando `php artisan serve`.
 
 ### 4. Ejecución
 
@@ -158,18 +117,22 @@ DB_PASSWORD=password
     - Borrar empresas con estado inactivo
     - Filtrar empresas por estado
 
-### Endpoints Iniciales
-    - `GET /api/companies`: Obtener todas las empresas.
-    - `GET /api/companies/{id}`: Obtener una empresa por ID.
-    - `POST /api/companies`: Crear una nueva empresa.
-    - `PUT /api/companies/{id}`: Actualizar una empresa existente.
-    - `DELETE /api/companies/{id}`: Eliminar una empresa.
+## Uso
 
-    - `GET /api/users`: Obtener todos los usuarios.
-    - `GET /api/users/{id}`: Obtener un usuario por ID.
-    - `POST /api/users`: Crear un nuevo usuario.
-    - `PUT /api/users/{id}`: Actualizar un usuario existente.
-    - `DELETE /api/users/{id}`: Eliminar un usuario.
+Una vez que el servidor esté en funcionamiento, puedes acceder a los siguientes endpoints:
+
+- `GET /api/companies`: Obtener todas las empresas.
+- `GET /api/companies/{id}`: Obtener una empresa por ID.
+- `GET /api/companies/nit/{nit}`: Obtener una empresa por NIT.
+- `POST /api/companies`: Crear una nueva empresa.
+- `PUT /api/companies/{id}`: Actualizar una empresa existente.
+- `DELETE /api/companies/{id}`: Eliminar una empresa.
+
+- `GET /api/users`: Obtener todos los usuarios.
+- `GET /api/users/{id}`: Obtener un usuario por ID.
+- `POST /api/users`: Crear un nuevo usuario.
+- `PUT /api/users/{id}`: Actualizar un usuario existente.
+- `DELETE /api/users/{id}`: Eliminar un usuario.
 
 ### 6. Pruebas Unitarias
 
