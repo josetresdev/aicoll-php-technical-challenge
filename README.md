@@ -158,6 +158,19 @@ DB_PASSWORD=password
     - Borrar empresas con estado inactivo
     - Filtrar empresas por estado
 
+### Endpoints Iniciales
+    - `GET /api/companies`: Obtener todas las empresas.
+    - `GET /api/companies/{id}`: Obtener una empresa por ID.
+    - `POST /api/companies`: Crear una nueva empresa.
+    - `PUT /api/companies/{id}`: Actualizar una empresa existente.
+    - `DELETE /api/companies/{id}`: Eliminar una empresa.
+
+    - `GET /api/users`: Obtener todos los usuarios.
+    - `GET /api/users/{id}`: Obtener un usuario por ID.
+    - `POST /api/users`: Crear un nuevo usuario.
+    - `PUT /api/users/{id}`: Actualizar un usuario existente.
+    - `DELETE /api/users/{id}`: Eliminar un usuario.
+
 ### 6. Pruebas Unitarias
 
 1. Ejecuta las pruebas unitarias para asegurar el correcto funcionamiento de los componentes del proyecto:

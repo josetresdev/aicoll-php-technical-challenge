@@ -2,11 +2,18 @@
 
 namespace App\Domain\Entities;
 
-class User
+use Illuminate\Database\Eloquent\Model;
+
+class User extends Model
 {
-    public $id;
-    public $name;
-    public $email;
-    public $password;
-    public $status;
+    protected $fillable = [
+        'id',
+        'name',
+        'email',
+        'password'
+    ];
+
+    protected $hidden = [
+        'password',
+    ];
 }

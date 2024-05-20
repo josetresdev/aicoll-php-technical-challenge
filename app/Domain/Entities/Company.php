@@ -2,12 +2,15 @@
 
 namespace App\Domain\Entities;
 
-class Company
+use Illuminate\Database\Eloquent\Model;
+
+class Company extends Model
 {
-    public $id;
-    public $name;
-    public $nit;
-    public $address;
-    public $status;
-    
+    protected $fillable = [
+        'id',
+        'name',
+        'nit',
+        'address',
+        'status'
+    ];
 }

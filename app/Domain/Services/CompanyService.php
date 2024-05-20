@@ -20,31 +20,30 @@ class CompanyService
 
     public function getCompanyById($id)
     {
-        return Company::find($id);
+        return $this->companyRepository->find($id);
     }
 
-    public function createCompany(array $data)
+    public function createCompany($data)
     {
-        return Company::create($data);
+        return $this->companyRepository->create($data);
     }
 
-    public function updateCompany($id, array $data)
+    public function updateCompany($id, $data)
     {
-        $company = Company::find($id);
-        if ($company) {
-            $company->update($data);
-            return $company;
+        $company = $this->companyRepository->find($id);
+        if (!$company) {
+            return null;
         }
-        return null;
+        $this->companyRepository->update($id, $data);
+        return $company->fresh();
     }
 
     public function deleteCompany($id)
     {
-        $company = Company::find($id);
-        if ($company) {
-            $company->delete();
-            return true;
+        $company = $this->companyRepository->find($id);
+        if (!$company) {
+            return false;
         }
-        return false;
+        return $this->companyRepository->delete($id);
     }
 }
