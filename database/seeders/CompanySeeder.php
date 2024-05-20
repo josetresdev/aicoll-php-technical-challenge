@@ -21,6 +21,7 @@ class CompanySeeder extends Seeder
             Company::create([
                 'name' => $faker->company,
                 'nit' => $faker->unique()->numerify('##########'), // Generate a 10 digit NIT
+                'address' => $faker->address,
                 'status' => $faker->randomElement(['active', 'inactive']),
             ]);
         }
