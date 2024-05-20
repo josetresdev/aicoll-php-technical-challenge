@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return response()->json(['message' => '¡Bienvenido a tu servicio Aicoll!'], 200);
@@ -9,4 +10,4 @@ Route::get('/', function () {
 
 
 Route::apiResource('companies', CompanyController::class);
-Route::get('/users', [UserController::class, 'index']);
+Route::apiResource('users', UserController::class);

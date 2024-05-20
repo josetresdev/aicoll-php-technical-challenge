@@ -16,7 +16,29 @@ class UserController extends Controller
 
     public function index()
     {
-        $users = $this->userService->getAllUsers();
-        return response()->json($users);
+        return response()->json($this->userService->getAllUsers());
+    }
+
+    public function show($id)
+    {
+        return response()->json($this->userService->getUserById($id));
+    }
+
+    public function store(Request $request)
+    {
+        $user = $this->userService->createUser($request->all());
+        return response()->json($user, 201);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $user = $this->userService->updateUser($id, $request->all());
+        return response()->json($user);
+    }
+
+    public function destroy($id)
+    {
+        $this->userService->deleteUser($id);
+        return response()->json(null, 204);
     }
 }
