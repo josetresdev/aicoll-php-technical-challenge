@@ -9,3 +9,4 @@ Route::get('/', function () {
 
 
 Route::get('/companies', [CompanyController::class, 'index']);
+Route::get('/users', [UserController::class, 'index']);
