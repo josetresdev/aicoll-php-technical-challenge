@@ -3,6 +3,7 @@
 namespace App\Domain\Services;
 
 use App\Domain\Repositories\UserRepository;
+use App\Models\User;
 
 class UserService
 {
