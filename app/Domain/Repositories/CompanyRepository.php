@@ -15,6 +15,11 @@ class CompanyRepository
     {
         return Company::find($id);
     }
+    
+    public function findByNit($nit)
+    {
+        return Company::where('nit', $nit)->first();
+    }
 
     public function create(array $data)
     {

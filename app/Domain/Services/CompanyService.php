@@ -23,6 +23,11 @@ class CompanyService
         return $this->companyRepository->find($id);
     }
 
+    public function findByNit($nit)
+    {
+        return $this->companyRepository->findByNit($nit);
+    }
+
     public function createCompany($data)
     {
         return $this->companyRepository->create($data);

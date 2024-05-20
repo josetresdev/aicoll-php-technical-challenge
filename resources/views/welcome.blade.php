@@ -67,6 +67,7 @@
                 <ul>
                     <li><span>GET</span> /api/companies: Obtener todas las empresas.</li>
                     <li><span>GET</span> /api/companies/{id}: Obtener una empresa por ID.</li>
+                    <li><span>GET</span> /api/companies/nit/{nit}: Obtener una empresa por NIT.</li>
                     <li><span>POST</span> /api/companies: Crear una nueva empresa.</li>
                     <li><span>PUT</span> /api/companies/{id}: Actualizar una empresa existente.</li>
                     <li><span>DELETE</span> /api/companies/{id}: Eliminar una empresa.</li>

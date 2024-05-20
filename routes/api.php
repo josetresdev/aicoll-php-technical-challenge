@@ -11,3 +11,4 @@ Route::get('/', function () {
 
 Route::apiResource('companies', CompanyController::class);
 Route::apiResource('users', UserController::class);
+Route::get('/companies/nit/{nit}', [CompanyController::class, 'showByNit']);

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Domain\Services\CompanyService;
+use App\Models\Company;
 use Illuminate\Http\Request;
 
 class CompanyController extends ApiController
@@ -27,6 +28,19 @@ class CompanyController extends ApiController
             return $this->errorResponse('Recurso no encontrado', 404);
         }
         return $this->successResponse($company);
+    }
+
+    public function showByNit($nit)
+    {
+        $company = $this->companyService->findByNit($nit);
+
+        if (!$company) {
+            return response()->json([
+                'message' => 'Company not found'
+            ], 404);
+        }
+
+        return response()->json($company, 200);
     }
 
     public function store(Request $request)
