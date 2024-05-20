@@ -17,4 +17,34 @@ class CompanyService
     {
         return $this->companyRepository->getAll();
     }
+
+    public function getCompanyById($id)
+    {
+        return Company::find($id);
+    }
+
+    public function createCompany(array $data)
+    {
+        return Company::create($data);
+    }
+
+    public function updateCompany($id, array $data)
+    {
+        $company = Company::find($id);
+        if ($company) {
+            $company->update($data);
+            return $company;
+        }
+        return null;
+    }
+
+    public function deleteCompany($id)
+    {
+        $company = Company::find($id);
+        if ($company) {
+            $company->delete();
+            return true;
+        }
+        return false;
+    }
 }

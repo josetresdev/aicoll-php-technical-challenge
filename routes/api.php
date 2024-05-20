@@ -8,5 +8,5 @@ Route::get('/', function () {
 });
 
 
-Route::get('/companies', [CompanyController::class, 'index']);
+Route::apiResource('companies', CompanyController::class);
 Route::get('/users', [UserController::class, 'index']);
