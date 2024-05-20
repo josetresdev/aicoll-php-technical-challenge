@@ -8,11 +8,6 @@ use Faker\Factory as Faker;
 
 class CompanySeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run()
     {
         $faker = Faker::create();
@@ -20,7 +15,7 @@ class CompanySeeder extends Seeder
         for ($i = 0; $i < 10; $i++) {
             Company::create([
                 'name' => $faker->company,
-                'nit' => $faker->unique()->numerify('##########'), // Generate a 10 digit NIT
+                'nit' => $faker->unique()->numerify('##########'),
                 'address' => $faker->address,
                 'status' => $faker->randomElement(['active', 'inactive']),
             ]);
