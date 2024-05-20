@@ -106,6 +106,18 @@ Sigue los siguientes pasos para configurar y utilizar el proyecto:
 
 ### 2. Configuración
 
+### Conexión a la Base de Datos
+
+La aplicación se conecta a una base de datos MySQL. A continuación, se detalla la configuración de conexión:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=database
+DB_USERNAME=user
+DB_PASSWORD=password
+
 1. Copia el archivo de configuración de ejemplo:
     ```bash
     cp .env.example .env
